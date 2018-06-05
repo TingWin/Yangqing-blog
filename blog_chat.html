@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript"  src="./js/jquery-3.2.0.min.js"></script>
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/blog_chat.css">
+</head>
+<body>
+    <!-- 登录弹窗 -->
+	<div class="changyan-overlay changyan-overlay-fixed"></div>
+	<div class="changyan-login">
+		<div class="changyan-login-log">
+			<div class="clear-g">
+				<div class="close-btn">	</div>
+			</div>
+			<div class="platform">
+				<div class="login-logo"></div>
+				<div class="split-hr">
+            		<span class="split-txt">正在使用畅言评论</span>
+        		</div>
+        		<div class="phone-login">
+	        		<div class="phone-login-title">手机登录</div>
+	        		<div class="phone-login-txt">短信获取6位初始密码</div>
+	        		<div class="phone-input-outer">
+	                	<input name="name" class="phone-input" type="text" value="" placeholder="手机号">
+	            	</div>
+	            	<div class="clear-g">
+						<div class="password-input-outer">
+							<input name="password" class="password-input" type="password" value="" placeholder="密码">
+						</div>
+						<span class="password-btn">获取新密码</span>
+					</div>
+					<div class="error-txt-outer">
+						<span node-type="phone-num-prompt" class="error-txt">填写的手机号不正确</span>
+						<span node-type="password-prompt" class="error-txt">密码错误</span>
+					</div>
+					<span node-type="phone-login" class="login-btn">登录畅言</span>
+        		</div>
+        		<ul class="login-group">
+        			<li label="wechat" class="login-item">
+						<span  class="login-logos login-logo-wechat" title="微信登录"></span>
+					</li>
+					<li label="weibo" class="login-item">
+						<span class="login-logos login-logo-weibo" title="微博登录"></span>
+					</li>
+					<li label="qq" class="login-item">
+						<span class="login-logos login-logo-qq" title="QQ登录"></span>
+					</li>
+					<li label="phone" class="login-item">
+						<span class="login-logos login-logo-phone" title="手机登录"></span>
+					</li>
+        		</ul>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="logo"><img src="./images/logo.png"></div>
+		<div class="header-list">
+			<a href="./blog.html">
+				<span class="list-info">首页</span>
+				<span class="list-news">Home</span>
+			</a>
+			<a href="javascript:void(0)">
+				<span class="list-info">关于我</span>
+				<span class="list-news">About</span>
+			</a>
+			<a href="javascript:void(0)">
+				<span class="list-info">慢生活</span>
+				<span class="list-news">Life</span>
+			</a>
+			<a href="javascript:void(0)">
+				<span class="list-info">模板分享</span>
+				<span class="list-news">Share</span>
+			</a>
+			<a href="javascript:void(0)">
+				<span class="list-info">学无止境</span>
+				<span class="list-news">Learn</span>
+			</a>
+			<a href="javascript:void(0)">
+				<span class="list-info">留言</span>
+				<span class="list-news">Saying</span>
+			</a>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-info">
+			<h2 class="ctitle">
+				<b>留言板</b> 
+				<span>你，生命中最重要的过客，之所以是过客，因为你未曾为我停留。</span>
+			</h2>
+			<div class="content-news">
+				<div class="content-about">
+					<div id="point">
+			        	<li></li>
+			          	<li></li>
+			          	<li></li>
+			          	<li></li>
+			          	<li></li>
+			          	<li></li>
+			          	<li></li>
+			          	<li></li>
+        			</div>
+        			<div class="aboutyq">
+        				<span><a href="/"><img src="./images/girl.jpg"></a></span>
+        				<p>当您驻足停留过，从此便注定我们的缘分。站在时间的尽头，我们已是朋友，前端的路上我再也不用一个人独自行走。</p>
+        			</div>
+        			<div class="chat">
+						<div class="commentaries">
+							<div class="chat-news">
+								<div class="chat-head">
+									<div class="chat-login">登录</div>
+								</div>
+								<div class="chat-box">
+									<div class="border-l"></div>
+									<div class="border-r"></div>
+									<div class="border-t">
+										<div class="border-t-l"></div>
+										<div class="border-t-r"></div>
+									</div>
+									<div class="border-b"></div>
+									<div class="border-text">
+										<input type="text" placeholder="来说两句吧...">
+									</div>
+									<div class="chat-icon">
+										<div class="chat-icon-l">
+											<img src="./images/face.png">
+											<img src="./images/image.png">
+										</div>
+										<div class="chat-icon-r">
+											<button node-type="issue"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="discuss">
+								<div class="discuss-top clearfix">
+									<div class="discuss-top-l">评论</div>
+									<div class="discuss-top-m"></div>
+									<div class="discuss-top-r">
+										<span class="comment-number"><span class="cy-number">84</span>人参与,<span class="cy-number">35</span>条评论</span>
+									</div>
+								</div>
+								<div class="discuss-content">
+									<div class="hot-discuss">
+										<div class="hot-title">
+											<div class="title-name-gw">
+	                        					<div class="title-name"></div>
+	                        					热门评论
+	                        				</div>
+	                        				<div class="discuss-list-1">
+	                        					<div class="d-item clearfix">
+													<div class="item-left">
+														<img src="./images/user1.png">
+													</div>
+													<div class="item-right">
+														<div class="top">
+															<span class="user-name"><a href="javascript:void(0)">挽留所有不能的</a></span>
+															<span class="user-address">[山西省太原市网友]</span>
+															<span class="user-time">2017年9月29日 11:36</span>
+														</div>
+														<div class="middle">
+															<p class="user-word">真心不错</p>
+														</div>
+														<div class="buttom">
+															<i class="gap-gw"></i>
+															<span class="report">
+																<i class="icon-flag"></i>
+																<em>举报</em>
+															</span>
+															<i class="gap-gw"></i>
+															<span class="reply"><a href="javascript:void(0)">回复</a></span>
+															<i class="gap-gw"></i>
+															<span class="support">
+											                    <i class="icon-ding-bg"></i>
+											                    <em class="icon-name-bg">2</em>
+			                    							</span>
+			                    							<i class="gap-gw"></i>
+			                    							<span  class="oppose">
+			                    								<i class="icon-cai-bg"></i>
+			                    								<em class="icon-name-bg"></em>
+			                    							</span>
+			                    							<i class="gap-gw"></i>
+			                    							<div class="prop">
+			                    								<span class="prop-ico"></span>
+			                    								<div class="prop-win">
+			                    									<div class="pw-top">
+			                    										<div class="item-content">
+			                    											<div class="prop-item">
+			                    												<span class="pi-img"><img src="./images/pKMx6s1_png.png"></span>
+			                    												<a class="pi-num" href="javascript:void(0)">
+			                    													<i class="numeral num-6"></i>
+			                    													<i class="numeral num-8"></i>
+			                    												</a>
+			                    											</div>
+			                    											<div class="prop-item">
+			                    												<span class="pi-img"><img src="./images/pKMx6s1_png.png"></span>
+			                    												<a class="pi-num" href="javascript:void(0)">
+			                    													<i class="numeral num-6"></i>
+			                    													<i class="numeral num-8"></i>
+			                    												</a>
+			                    											</div>
+			                    											<div class="prop-item">
+			                    												<span class="pi-img"><img src="./images/pKMx6s1_png.png"></span>
+			                    												<a class="pi-num" href="javascript:void(0)">
+			                    													<i class="numeral num-6"></i>
+			                    													<i class="numeral num-8"></i>
+			                    												</a>
+			                    											</div>
+			                    											<div class="prop-item">
+			                    												<span class="pi-img"><img src="./images/pKMx6s1_png.png"></span>
+			                    												<a class="pi-num" href="javascript:void(0)">
+			                    													<i class="numeral num-6"></i>
+			                    													<i class="numeral num-8"></i>
+			                    												</a>
+			                    											</div>
+			                    										</div>
+			                    									</div>
+			                    									<div class="pw-lowaer">
+			                    										<a href="javascript:void(0)" class="unuseable">登录给他的评论盖章</a>
+			                    									</div>
+			                    								</div>
+			                    							</div>
+														</div>
+													</div>
+												</div>
+	                        				</div>
+										</div>
+									</div>
+									<div class="hot-discuss">
+										<div class="hot-title">
+											<div class="title-name-gw">
+	                        					<div class="title-name"></div>
+	                        					最新评论
+	                        				</div>
+	                        				<div class="discuss-list">
+	                        					
+	                        				</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="look-more">
+							<div class="section-page">
+    							<div class="cmt-more">
+    								查看更多
+    								<span class="more-arrow"></span>
+    							</div>
+    						</div>
+						</div>
+						<div class="buzz-topic">
+							<div class="newslist-title">
+								<h3 class="title-name">热评话题</h3>
+							</div>
+							<div class="newslist">
+								<ul class="conts clearfix">
+            						<li>
+            							<a href="javascript:void(0)" >
+            								留言板 - 一个站在web前端设计之路的女技术员
+            								<span class="hot"></span>
+            							</a>
+            						</li>
+            						<li>
+            							<a href="javascript:void(0)" >
+            								留言板 - 一个站在web前端设计之路的女技术员
+            								<span class="hot"></span>
+            							</a>
+            						</li>
+            						<li>
+            							<a href="javascript:void(0)" >
+            								留言板 - 一个站在web前端设计之路的女技术员
+            								<span class="hot"></span>
+            							</a>
+            						</li>     
+                    			</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		Design by DanceSmile 蜀ICP备11002373号-1
+	</div>
+	<script type="text/javascript" src="./js/blog_chat.js"></script>
+</body>
+</html>
